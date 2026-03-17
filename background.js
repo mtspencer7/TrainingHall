@@ -1,5 +1,5 @@
-const GA_MEASUREMENT_ID = "G-9TJCGJZ3GR";
-const GA_API_SECRET = "bhpG9iHeQhu0iGMLq7m2ag";
+const GA_MEASUREMENT_ID = "G-redacted";
+const GA_API_SECRET = "redacted";
 const ENVIRONMENT = "prod";
 const SESSION_EXPIRY_MS = 30 * 60 * 1000; // 30 minutes
 
