@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Training Hall",
+  "version": "4.2",
+  "description": "Guides users through the reporting platform with pop-ups and tutorials.",
+  "permissions": ["storage"],
+  "host_permissions": [
+  "https://www.google-analytics.com/*"
+],
+  "background": {
+  "service_worker": "background.js"
+},
+  "action": {
+    "default_icon": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://portal.inbcu.com/irj/portal/*","https://uphe.inbcu.com/irj/portal","https://bo42corpsysbhp.inbcu.com/*","https://bocorpsysbhr.inbcu.com/*"],
+      "js":["content.js"],
+      "css": ["styles.css"],
+      "html": ["popup.html"],
+      "all_frames": true
+    }],
+  "web_accessible_resources": [{
+      "resources": ["images/*","badges/*","menu-ui/*","gifs/*","icons/*","sounds/*","inject.js"],
+      "matches": ["<all_urls>"]
+  }
+  ]
+}
