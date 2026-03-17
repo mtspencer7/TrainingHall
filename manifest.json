@@ -15,7 +15,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://portal.inbcu.com/irj/portal/*","https://uphe.inbcu.com/irj/portal","https://bo42corpsysbhp.inbcu.com/*","https://bocorpsysbhr.inbcu.com/*"],
+      "matches": ["https://portal.example.com/irj/portal/*","https://uphe.example.com/irj/portal","https://bo42corpsysbhp.example.com/*","https://bocorpsysbhr.example.com/*"],
       "js":["content.js"],
       "css": ["styles.css"],
       "html": ["popup.html"],
