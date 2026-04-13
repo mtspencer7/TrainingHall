@@ -12,9 +12,9 @@ let popupsEnabled = false; // Toggleable setting to enable/disable popups
 let gifClicked = false;
 let bwClassic = (iframeId === 'iframe4681-5055721' || document.querySelector('#webiViewFrame') || iframeId === 'iframeHome-5055721' || document.querySelector('#ListingURE_content'))
 
-    let targetDomain = 'bo42corpsysbhp.inbcu.com'; // Replace with your desired domain
+    let targetDomain = 'bo42corpsysbhp.example.com'; // Replace with your desired domain
     let currentDomain = window.location.hostname; // Get the current domain
-    let correctDomain = ((currentDomain === 'bocorpsysbhr.inbcu.com') || (currentDomain === 'portal.inbcu.com'));
+    let correctDomain = ((currentDomain === 'bocorpsysbhr.example.com') || (currentDomain === 'portal.example.com'));
 
       let reportPrompt = document.querySelector('#webiViewFrame');
       let bwHome = document.querySelector('#id_93_3sl5j068');
@@ -876,7 +876,7 @@ function displayPopups(currentPageLabel, gifClicked) {
           // Listen for report name from injected script
           window.addEventListener("message", (event) => {
             // 1️⃣ Validate origin
-            if (event.origin !== "https://bo42corpsysbhp.inbcu.com") return;
+            if (event.origin !== "https://bo42corpsysbhp.example.com") return;
 
             console.log(event.data);
 
@@ -1994,7 +1994,7 @@ advanceOnClick: true}}
       identifiers: ['#webiViewFrame'],
       tutorials: {
         'basic': [
-        {  position: { top: '35%', left: '72%' }, message: `This is the <a href="https://nbcuni.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1" target="_blank">Performance Status Report</a>! The <b>Prompt</b> window allows you to set filter criteria for your report. Red arrows on the left side indicate required fields.` },
+        {  position: { top: '35%', left: '72%' }, message: `This is the <a href="https://example.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1" target="_blank">Performance Status Report</a>! The <b>Prompt</b> window allows you to set filter criteria for your report. Red arrows on the left side indicate required fields.` },
         {  position: { top: '35%', left: '72%' }, message: `To set filter criteria, Click one of the criteria under <b>Prompts Summary</b>. Type an asterisk (<b>*</b>) into the bottom search bar and hit Enter on your keyboard. Select your desired value(s) from the list and click the right arrow.` },
         {  position: { top: '35%', left: '72%' }, message: `Click <b>OK</b> to run the report` },
         {  position: { top: '40px', left: '5%' }, message: `Once the report is done loading, Click the <img src="${chrome.runtime.getURL('images/export.PNG')}" style="width:30px; height:auto; vertical-align:middle;" alt="Export Icon"> Icon above to <b>Export</b> your report to Excel. ` },
@@ -2451,7 +2451,7 @@ menu.style.top  = `${nextTop}px`;
 }
     // ---- Training Hall UI (Dragon Scroll + menu) ----
 (function initTrainingHallUI() {
-  if ((bwFolders || targetDomain) && !(currentDomain === 'portal.inbcu.com')) {if (window === window.top || window.frames.length !== 0) {return}} 
+  if ((bwFolders || targetDomain) && !(currentDomain === 'portal.example.com')) {if (window === window.top || window.frames.length !== 0) {return}} 
   if (!bwFolders) if (window.frames.length === 0) {return};
   const rootDoc = document; 
   if (rootDoc.getElementById('dragon-scroll')) return;
@@ -2466,7 +2466,7 @@ menu.style.top  = `${nextTop}px`;
 // --- helpers: share url + clipboard copy (HTML + plain) ---
 
 function getBadgeShareUrl(badgeId) {
-  return `https://nbcuni.sharepoint.com/:i:/r/sites/PeopleAnalyticsTeam/Shared%20Documents/People%20Analytics/Reporting/BW%20Training%20Hall/badges/${badgeId}.png?csf=1&web=1&e=h6KJVT`;
+  return `https://example.sharepoint.com/:i:/r/sites/PeopleAnalyticsTeam/Shared%20Documents/People%20Analytics/Reporting/BW%20Training%20Hall/badges/${badgeId}.png?csf=1&web=1&e=h6KJVT`;
 }
 
 function escapeHtml(str) {
@@ -2480,7 +2480,7 @@ function escapeHtml(str) {
 
 async function copyBadgeShareToClipboard(badgeName, badgeId) {
   const url = getBadgeShareUrl(badgeId);
-  const url2 = "https://portal.inbcu.com/irj/portal"
+  const url2 = "https://portal.example.com/irj/portal"
 
   const plainText =
     `Check out my new Training Hall badge! \n\n` +
@@ -3337,8 +3337,8 @@ scroll.addEventListener('pointerdown', function (e) {
 </div>
         <div class="tab-content hidden" id="tab-resources">
           <h3>Resources</h3>
-          <a class="resource-link" href="https://nbcuni.sharepoint.com/sites/thrivelibrary/Shared%20Documents/..." target="_blank">- tHRive Library</a><br/>
-          <a class="resource-link" href="https://nbcuni.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx" target="_blank">- Submit a Report Request</a><br/>
+          <a class="resource-link" href="https://example.sharepoint.com/sites/thrivelibrary/Shared%20Documents/..." target="_blank">- tHRive Library</a><br/>
+          <a class="resource-link" href="https://example.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx" target="_blank">- Submit a Report Request</a><br/>
           </div>
         <div class="tab-content hidden" id="tab-settings">
           <h3>Settings</h3>
@@ -3513,7 +3513,7 @@ function renderResources() {
 
           <div class="resource-row">
             <a class="resource-link"
-              href="https://nbcuni.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1"
+              href="https://example.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1"
               target="_blank" rel="noopener noreferrer">
               - tHRive Library
             </a>
@@ -3521,7 +3521,7 @@ function renderResources() {
 
           <div class="resource-row">
             <a class="resource-link"
-              href="https://nbcuni.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx"
+              href="https://example.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx"
               target="_blank" rel="noopener noreferrer">
               - Submit a Report Request
             </a>
@@ -3537,7 +3537,7 @@ function renderResources() {
 
           <div class="resource-row">
             <a class="resource-link"
-              href="mailto:peopleanalyticsreporting@nbcuni.com?subject=Training%20Hall"
+              href="mailto:peopleanalyticsreporting@example.com?subject=Training%20Hall"
               target="_blank" rel="noopener noreferrer">
               - Questions or Suggestions? 
             </a>
@@ -6492,8 +6492,8 @@ function injectScriptAndSetupListener() {
   // Add your real BW hosts here (prod, test, etc.)
   const ALLOWED_ORIGINS = new Set([
     window.location.origin, // same-origin as the page you're on
-    "https://bo42corpsysbhp.inbcu.com/*",
-    "https://portal.inbcu.com/irj/portal/*"
+    "https://bo42corpsysbhp.example.com/*",
+    "https://portal.example.com/irj/portal/*"
   ]);
 
   // Make this a named handler so you can remove it later if needed
@@ -6869,7 +6869,7 @@ function prettyTutorialName(raw) {
 
     if (
       (window !== window.top) ||
-      (window === window.top && currentDomain === 'portal.inbcu.com' && showPo === true)
+      (window === window.top && currentDomain === 'portal.example.com' && showPo === true)
     ) {
       closeAllGifs();
 
