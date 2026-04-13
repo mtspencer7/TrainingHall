@@ -12,9 +12,9 @@ let popupsEnabled = false; // Toggleable setting to enable/disable popups
 let gifClicked = false;
 let bwClassic = (iframeId === 'iframe4681-5055721' || document.querySelector('#webiViewFrame') || iframeId === 'iframeHome-5055721' || document.querySelector('#ListingURE_content'))
 
-    let targetDomain = 'bo42corpsysbhp.example.com'; // Replace with your desired domain
+    let targetDomain = 'bo42corpsysbhp.inbcu.com'; // Replace with your desired domain
     let currentDomain = window.location.hostname; // Get the current domain
-    let correctDomain = ((currentDomain === 'bocorpsysbhr.example.com') || (currentDomain === 'portal.example.com'));
+    let correctDomain = ((currentDomain === 'bocorpsysbhr.inbcu.com') || (currentDomain === 'portal.inbcu.com'));
 
       let reportPrompt = document.querySelector('#webiViewFrame');
       let bwHome = document.querySelector('#id_93_3sl5j068');
@@ -876,7 +876,7 @@ function displayPopups(currentPageLabel, gifClicked) {
           // Listen for report name from injected script
           window.addEventListener("message", (event) => {
             // 1️⃣ Validate origin
-            if (event.origin !== "https://bo42corpsysbhp.example.com") return;
+            if (event.origin !== "https://bo42corpsysbhp.inbcu.com") return;
 
             console.log(event.data);
 
@@ -1065,18 +1065,18 @@ advanceOnClick: true}}
       tutorials: {
         'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
       ],
           'basic': [
         {  position: { top: '45%', left: '35%' }, message: `Hi there, Welcome to this BW tutorial! `, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.remove('auto-unfurl');
   }},
         {  position: { top: '45%', left: '35%' }, message: `This basic tutorial will teach you to:<br><b>1.</b> Access the BW environment</br><b>2.</b> Save a report to your Favorites<br><b>3.</b> Run and Export a report.`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.remove('auto-unfurl');
   } }, 
         {  position: { top: '45%', left: '35%' }, message: `Follow the instructions on the pop ups and click <b>Next</b> when you're ready to move on! ` },
@@ -1084,7 +1084,7 @@ advanceOnClick: true}}
       ],
           'bi-inbox': [
         {  position: { top: '45%', left: '35%' }, message: `Hi there, Welcome to this BW tutorial! `, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.remove('auto-unfurl');
   } },      
         {  position: { top: '45%', left: '35%' }, message: `This basic tutorial will teach you how to use the <b>BI Inbox</b>` },       
@@ -1093,7 +1093,7 @@ advanceOnClick: true}}
       ],
         'bw-schedule': [
         {  position: { top: '45%', left: '35%' }, message: `Hi there, Welcome to this BW tutorial! `, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.remove('auto-unfurl');
   } },      
         {  position: { top: '45%', left: '35%' }, message: `This basic tutorial will teach you how to <b>Schedule </b> your reports to run in the background.` },       
@@ -1102,7 +1102,7 @@ advanceOnClick: true}}
       ],
         'bw-design': [
         {  position: { top: '45%', left: '35%' }, message: `Hi there, Welcome to this BW tutorial! `, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.remove('auto-unfurl');
   } },      
         {  position: { top: '45%', left: '35%' }, message: `This basic tutorial will teach you how to use <b>Design Mode</b> to customize your reports` },       
@@ -1115,12 +1115,12 @@ advanceOnClick: true}}
       tutorials: {
                 'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
         {  position: { top: '45%', left: '35%' }, message: `Master Shifu sent you a message. Click the <b>Dragon Scroll </b> to open it! `, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.remove('auto-unfurl');
   } }
       ],
@@ -1236,7 +1236,7 @@ advanceOnClick: true}}
       }},
         {  position: { top: '135px', left: '250px' }, message: `This is where you will find any reports that were sent to your <b>BI Inbox</b>. You can then copy them to your Favorites folder and run them as you wish!` },
         {  position: { top: '135px', left: '250px' }, message: `Congratulations! You've completed this tutorial on the <b>BI Inbox</b>`,  badgeId: 2, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   }}
@@ -1272,7 +1272,7 @@ advanceOnClick: true}}
         }}, 
         {  position: { top: '135px', left: '250px' }, message: `To re-access the <b>History</b> menu, Click your report and then click <b>More Actions > History</b>`, glowTarget: 'IconImg_Txt_iconMenu_icon_ListingURE_toolbarItem0_4', tutorial: 'bw-schedule'},
         {  position: { top: '135px', left: '250px' }, message: `Congratulations! You've completed this tutorial on <b>scheduling reports!</b>`, badgeId: 3, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   }} 
@@ -1291,7 +1291,7 @@ advanceOnClick: true}}
       ],        
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1307,7 +1307,7 @@ advanceOnClick: true}}
         {  position: { top: '40px', left: '5%' }, message: `Once the report is done loading, Click the <img src="${chrome.runtime.getURL('images/export.PNG')}" style="width:30px; height:auto; vertical-align:middle;" alt="Export Icon"> Icon above to <b>Export</b> your report to Excel. ` },
         {  position: { top: '25%', left: '72%' }, message: `Select File Type <b>Excel (.xlsx)</b> and Click <b>OK</b>. After the export completes, your report will appear in your Downloads.` },
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   }  }
@@ -1342,12 +1342,12 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Choose a name for your custom report and click <b>Save</b>.`, glowTarget: 'IconImg_Txt_iconMenu_icon_ListingURE_toolbarItem0_3' }, 
         {  position: { top: '1px', left: '45%' }, message: `If you would like to run your report, you can click the <b>Refresh</b> <img src="${chrome.runtime.getURL('icons/refresh.png')}" style="width:30px; height:auto; vertical-align:middle;" alt="Refresh Icon"> button on the top left.`, glowTarget: 'IconImg_Txt_iconMenu_icon_ListingURE_toolbarItem0_3' }, 
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1370,7 +1370,7 @@ advanceOnClick: true}}
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1389,7 +1389,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1},
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1422,7 +1422,7 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1449,7 +1449,7 @@ advanceOnClick: true}}
     ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1468,7 +1468,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1514,14 +1514,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1540,7 +1540,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1593,14 +1593,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1618,7 +1618,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1671,14 +1671,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1697,7 +1697,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1750,7 +1750,7 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1768,7 +1768,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1801,7 +1801,7 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1828,7 +1828,7 @@ advanceOnClick: true}}
     ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1846,7 +1846,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1899,14 +1899,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1924,7 +1924,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -1977,14 +1977,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -1994,7 +1994,7 @@ advanceOnClick: true}}
       identifiers: ['#webiViewFrame'],
       tutorials: {
         'basic': [
-        {  position: { top: '35%', left: '72%' }, message: `This is the <a href="https://example.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1" target="_blank">Performance Status Report</a>! The <b>Prompt</b> window allows you to set filter criteria for your report. Red arrows on the left side indicate required fields.` },
+        {  position: { top: '35%', left: '72%' }, message: `This is the <a href="https://nbcuni.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1" target="_blank">Performance Status Report</a>! The <b>Prompt</b> window allows you to set filter criteria for your report. Red arrows on the left side indicate required fields.` },
         {  position: { top: '35%', left: '72%' }, message: `To set filter criteria, Click one of the criteria under <b>Prompts Summary</b>. Type an asterisk (<b>*</b>) into the bottom search bar and hit Enter on your keyboard. Select your desired value(s) from the list and click the right arrow.` },
         {  position: { top: '35%', left: '72%' }, message: `Click <b>OK</b> to run the report` },
         {  position: { top: '40px', left: '5%' }, message: `Once the report is done loading, Click the <img src="${chrome.runtime.getURL('images/export.PNG')}" style="width:30px; height:auto; vertical-align:middle;" alt="Export Icon"> Icon above to <b>Export</b> your report to Excel. ` },
@@ -2002,7 +2002,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -2065,14 +2065,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -2090,7 +2090,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -2143,14 +2143,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -2168,7 +2168,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -2221,14 +2221,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -2246,7 +2246,7 @@ advanceOnClick: true}}
         {  position: { top: '25%', left: '65%' }, message: `<b>Congratulations, You've completed this BW tutorial! :)</b>`, badgeId: 1  },
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
@@ -2299,14 +2299,14 @@ advanceOnClick: true}}
         {  position: { top: '1px', left: '45%' }, message: `Congratulations! You've completed this tutorial on <b>Design Mode</b> :)`, badgeId: 4},
         {  position: { top: '25%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner to open the Hall menu and check out your new badge!`,
         glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } }, 
       ],
       'default': [
         {  position: { top: '45%', left: '35%' }, message: `Click <b>Documents</b> on the top left of your screen and then Click the <b>Dragon Scroll</b> on the top right corner of your screen to open the Hall menu`, glowTarget: function () {
-          const panda = document.getElementById('panda-teardrop');
+          const panda = document.getElementById('dragon-scroll');
           panda.classList.add('auto-unfurl');
           return panda;
   } },
@@ -2449,12 +2449,12 @@ menu.style.top  = `${nextTop}px`;
   window.addEventListener("mousemove", onMove);
   window.addEventListener("mouseup", onUp);
 }
-    // ---- Training Hall UI (teardrop + menu) ----
+    // ---- Training Hall UI (Dragon Scroll + menu) ----
 (function initTrainingHallUI() {
-  if ((bwFolders || targetDomain) && !(currentDomain === 'portal.example.com')) {if (window === window.top || window.frames.length !== 0) {return}} 
+  if ((bwFolders || targetDomain) && !(currentDomain === 'portal.inbcu.com')) {if (window === window.top || window.frames.length !== 0) {return}} 
   if (!bwFolders) if (window.frames.length === 0) {return};
   const rootDoc = document; 
-  if (rootDoc.getElementById('panda-teardrop')) return;
+  if (rootDoc.getElementById('dragon-scroll')) return;
 
   // ------------------------
   // Data models
@@ -2466,7 +2466,7 @@ menu.style.top  = `${nextTop}px`;
 // --- helpers: share url + clipboard copy (HTML + plain) ---
 
 function getBadgeShareUrl(badgeId) {
-  return `https://example.sharepoint.com/:i:/r/sites/PeopleAnalyticsTeam/Shared%20Documents/People%20Analytics/Reporting/BW%20Training%20Hall/badges/${badgeId}.png?csf=1&web=1&e=h6KJVT`;
+  return `https://nbcuni.sharepoint.com/:i:/r/sites/PeopleAnalyticsTeam/Shared%20Documents/People%20Analytics/Reporting/BW%20Training%20Hall/badges/${badgeId}.png?csf=1&web=1&e=h6KJVT`;
 }
 
 function escapeHtml(str) {
@@ -2480,7 +2480,7 @@ function escapeHtml(str) {
 
 async function copyBadgeShareToClipboard(badgeName, badgeId) {
   const url = getBadgeShareUrl(badgeId);
-  const url2 = "https://portal.example.com/irj/portal"
+  const url2 = "https://portal.inbcu.com/irj/portal"
 
   const plainText =
     `Check out my new Training Hall badge! \n\n` +
@@ -2566,7 +2566,7 @@ Object.assign(pill.style, {
   style.textContent = `
     #hall-menu, #hall-menu * { box-sizing: border-box; }
     /* Panda tab same as before... */
-#panda-teardrop {
+#dragon-scroll {
   position: fixed;
   top: -50px;
   right: 20px;
@@ -2576,7 +2576,7 @@ Object.assign(pill.style, {
 }
 
 /* Rolled scroll = default visible */
-#panda-teardrop .rolled {
+#dragon-scroll .rolled {
   width: 80px;
   height: 120px;
   background: url("${chrome.runtime.getURL('menu-ui/hall-dragon-scroll-rolled.png')}") no-repeat center/contain;
@@ -2588,7 +2588,7 @@ Object.assign(pill.style, {
 }
 
 /* Unfurled scroll + logo = hidden until hover */
-#panda-teardrop .unfurled {
+#dragon-scroll .unfurled {
   position: absolute;
   top: 45%;   /* directly below rolled scroll */
   left: 0;
@@ -2605,7 +2605,7 @@ Object.assign(pill.style, {
   pointer-events: none; /* unfurled part can't be hovered/clicked */
 }
 
-#panda-teardrop .td-notif {
+#dragon-scroll .td-notif {
   position: relative;
   top: 17px;
   right: -48px;
@@ -2622,9 +2622,9 @@ Object.assign(pill.style, {
   white-space: nowrap;
 }
 
-#panda-teardrop:hover .unfurled,
-#panda-teardrop.has-new .unfurled,
-#panda-teardrop.auto-unfurl .unfurled {
+#dragon-scroll:hover .unfurled,
+#dragon-scroll.has-new .unfurled,
+#dragon-scroll.auto-unfurl .unfurled {
   opacity: 1;
   clip-path: inset(0 0 0 0);
 }
@@ -3142,7 +3142,7 @@ Object.assign(pill.style, {
   // ------------------------
 const panda = rootDoc.createElement('div');
 
-panda.id = 'panda-teardrop';
+panda.id = 'dragon-scroll';
 panda.innerHTML = `
   <div class="rolled"></div>
   <div class="unfurled">
@@ -3214,7 +3214,7 @@ let isDragging = false;
 let startX, startY;
 let hasMoved = false;
 
-const scroll = document.getElementById('panda-teardrop');
+const scroll = document.getElementById('dragon-scroll');
 
 function onpointerMoveScroll(e) {
     if (!isDragging) {
@@ -3337,8 +3337,8 @@ scroll.addEventListener('pointerdown', function (e) {
 </div>
         <div class="tab-content hidden" id="tab-resources">
           <h3>Resources</h3>
-          <a class="resource-link" href="https://example.sharepoint.com/sites/thrivelibrary/Shared%20Documents/..." target="_blank">- tHRive Library</a><br/>
-          <a class="resource-link" href="https://example.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx" target="_blank">- Submit a Report Request</a><br/>
+          <a class="resource-link" href="https://nbcuni.sharepoint.com/sites/thrivelibrary/Shared%20Documents/..." target="_blank">- tHRive Library</a><br/>
+          <a class="resource-link" href="https://nbcuni.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx" target="_blank">- Submit a Report Request</a><br/>
           </div>
         <div class="tab-content hidden" id="tab-settings">
           <h3>Settings</h3>
@@ -3513,7 +3513,7 @@ function renderResources() {
 
           <div class="resource-row">
             <a class="resource-link"
-              href="https://example.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1"
+              href="https://nbcuni.sharepoint.com/sites/thrivelibrary/SitePages/HR Operations %26 Systems - Reporting Training.aspx?web=1"
               target="_blank" rel="noopener noreferrer">
               - tHRive Library
             </a>
@@ -3521,7 +3521,7 @@ function renderResources() {
 
           <div class="resource-row">
             <a class="resource-link"
-              href="https://example.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx"
+              href="https://nbcuni.sharepoint.com/sites/HROpsCentral/SitePages/Reporting.aspx"
               target="_blank" rel="noopener noreferrer">
               - Submit a Report Request
             </a>
@@ -3537,7 +3537,7 @@ function renderResources() {
 
           <div class="resource-row">
             <a class="resource-link"
-              href="mailto:peopleanalyticsreporting@example.com?subject=Training%20Hall"
+              href="mailto:peopleanalyticsreporting@nbcuni.com?subject=Training%20Hall"
               target="_blank" rel="noopener noreferrer">
               - Questions or Suggestions? 
             </a>
@@ -3845,7 +3845,7 @@ function getTotalNotifications() {
 }
 
 function peekUnfurl(flagClass, duration = 2000) {
-  const panda = document.getElementById('panda-teardrop');
+  const panda = document.getElementById('dragon-scroll');
   // clear any previous timers
   clearTimeout(panda._unfurlTimer);
   panda.classList.add(flagClass);
@@ -3858,7 +3858,7 @@ function afterStateLoaded() {
   updateTabNotifications();
   updatePandaCounter();
 
-  const panda = document.getElementById('panda-teardrop');
+  const panda = document.getElementById('dragon-scroll');
   // clear any leftover flags from a prior page/session
   panda.classList.remove('has-new', 'auto-unfurl');
 
@@ -3874,7 +3874,7 @@ loadState(() => afterStateLoaded());
 function updatePandaCounter() {
   const total   = getTotalNotifications();
   const counter = document.getElementById('panda-counter');
-  const panda   = document.getElementById('panda-teardrop');
+  const panda   = document.getElementById('dragon-scroll');
   if (!counter) return;
 
   const oldVal = parseInt(counter.textContent) || 0;
@@ -4563,7 +4563,7 @@ if (badgeId) {
 function startTrainingHallTour() {
   const steps = [
     {
-      targetSelector: "#tutorialMinion",
+      targetSelector: "#poElement",
       title: "Hi! I’m Po.",
       body: `
 Welcome to <strong>Training Hall</strong>.<br><br>
@@ -4579,7 +4579,7 @@ To choose a different tutorial, open the <strong>Dragon Scroll</strong>.
     top: "70%"
   }},
     {
-      targetSelector: "#panda-teardrop",
+      targetSelector: "#dragon-scroll",
       title: "The Dragon Scroll",
 body: `
 See this scroll?<br><br>
@@ -4799,15 +4799,15 @@ dragHandle.appendChild(title);
     flexWrap: "wrap"
   });
 
-if (step.targetSelector === '#tutorialMinion') {
-simulateLegacyClick(document.querySelector('#tutorialMinion'));
+if (step.targetSelector === '#poElement') {
+simulateLegacyClick(document.querySelector('#poElement'));
 }
 
-if (step.targetSelector === '#panda-teardrop') {
+if (step.targetSelector === '#dragon-scroll') {
   const menu = document.getElementById('hall-menu');
 const backdrop = document.getElementById('hall-backdrop');
   menu.style.display='none'; backdrop.style.display='none';
-  const panda = document.getElementById('panda-teardrop');
+  const panda = document.getElementById('dragon-scroll');
   panda.classList.add('auto-unfurl');
 }
 
@@ -6286,7 +6286,7 @@ function openConfirmationPopup(popup) {
     chrome.runtime.sendMessage({ type: "LOG_EVENT", event: "tutorial_exit2", data: { tutorial: result.activeTutorial, report_name: result.reportName, current_index: currentIndex, total_steps: totalSteps} });
     });    
     close();
-    const panda = document.getElementById("panda-teardrop");
+    const panda = document.getElementById("dragon-scroll");
     if (panda) panda.classList.remove("auto-unfurl");
     closeAllPopups();
     popupsEnabled = false;
@@ -6329,10 +6329,10 @@ function isWebm(filename) {
   return /\.webm$/i.test(filename);
 }
 
-function createMinionElement(minionEmote) {
-  const url = chrome.runtime.getURL("gifs/" + minionEmote);
+function createGifEmote(gifEmote) {
+  const url = chrome.runtime.getURL("gifs/" + gifEmote);
 
-  if (isWebm(minionEmote)) {
+  if (isWebm(gifEmote)) {
     const v = document.createElement("video");
     v.src = url;
     v.autoplay = true;
@@ -6355,7 +6355,7 @@ function createMinionElement(minionEmote) {
   return img;
 }
 
-function wireMinionInteractions(el, minionEmote) {
+function wireGifInteractions(el, gifEmote) {
   // WebM: true pause/resume
   if (el.tagName === "VIDEO") {
     el.addEventListener("pointerenter", () => el.pause());
@@ -6366,7 +6366,7 @@ function wireMinionInteractions(el, minionEmote) {
 
   // GIF: can't pause; keep your "restart on hover" behavior
   el.addEventListener("pointerover", () => {
-    const url = chrome.runtime.getURL("gifs/" + minionEmote);
+    const url = chrome.runtime.getURL("gifs/" + gifEmote);
     el.src = ""; // force reload
     el.src = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
   });
@@ -6378,30 +6378,30 @@ function wireMinionInteractions(el, minionEmote) {
   var randomNumber = Math.floor(Math.random() * 11) + 1;
 
 // Set the variable based on the random number
-var minionEmote;
+var gifEmote;
 
 switch (randomNumber) {
-  case 1:  minionEmote = "poawesome.webm"; break;
-  case 2:  minionEmote = "pospin.webm"; break;
-  case 3:  minionEmote = "podumplingbackpack.webm"; break;
-  case 4:  minionEmote = "podumpling.webm"; break;
-  case 5:  minionEmote = "pobow.webm"; break;
-  case 6:  minionEmote = "pohighfive.webm"; break;
-  case 7:  minionEmote = "dumpling.webm"; break;
-  case 8:  minionEmote = "bunnytrio.webm"; break;
-  case 9:  minionEmote = "shifupleased.webm"; break;
-  case 10: minionEmote = "babypo.webm"; break;
-  case 11: minionEmote = "babytigress.webm"; break;
+  case 1:  gifEmote = "poawesome.webm"; break;
+  case 2:  gifEmote = "pospin.webm"; break;
+  case 3:  gifEmote = "podumplingbackpack.webm"; break;
+  case 4:  gifEmote = "podumpling.webm"; break;
+  case 5:  gifEmote = "pobow.webm"; break;
+  case 6:  gifEmote = "pohighfive.webm"; break;
+  case 7:  gifEmote = "dumpling.webm"; break;
+  case 8:  gifEmote = "bunnytrio.webm"; break;
+  case 9:  gifEmote = "shifupleased.webm"; break;
+  case 10: gifEmote = "babypo.webm"; break;
+  case 11: gifEmote = "babytigress.webm"; break;
 }
 
 function isWebm(filename) {
   return /\.webm$/i.test(filename);
 }
 
-function createMinionElement(minionEmote) {
-  const url = chrome.runtime.getURL("gifs/" + minionEmote);
+function createGifEmote(gifEmote) {
+  const url = chrome.runtime.getURL("gifs/" + gifEmote);
 
-  if (isWebm(minionEmote)) {
+  if (isWebm(gifEmote)) {
     const v = document.createElement("video");
     v.src = url;
     v.autoplay = true;
@@ -6422,23 +6422,23 @@ function createMinionElement(minionEmote) {
   return img;
 }
 
-function wireMinionInteractions(el, minionEmote) {
+function wireGifInteractions(el, gifEmote) {
   if (el.tagName === "VIDEO") {
     el.addEventListener("click", () => (el.paused ? el.play() : el.pause()));
     return;
   }
 
   el.addEventListener("pointerover", () => {
-    const url = chrome.runtime.getURL("gifs/" + minionEmote);
+    const url = chrome.runtime.getURL("gifs/" + gifEmote);
     el.src = "";
     el.src = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();
   });
 }
 
-console.log(minionEmote);
-const minionEl = createMinionElement(minionEmote);
-popup.appendChild(minionEl);
-wireMinionInteractions(minionEl, minionEmote);
+console.log(gifEmote);
+const gifEl = createGifEmote(gifEmote);
+popup.appendChild(gifEl);
+wireGifInteractions(gifEl, gifEmote);
 
 return popup;
 
@@ -6492,8 +6492,8 @@ function injectScriptAndSetupListener() {
   // Add your real BW hosts here (prod, test, etc.)
   const ALLOWED_ORIGINS = new Set([
     window.location.origin, // same-origin as the page you're on
-    "https://bo42corpsysbhp.example.com/*",
-    "https://portal.example.com/irj/portal/*"
+    "https://bo42corpsysbhp.inbcu.com/*",
+    "https://portal.inbcu.com/irj/portal/*"
   ]);
 
   // Make this a named handler so you can remove it later if needed
@@ -6869,17 +6869,17 @@ function prettyTutorialName(raw) {
 
     if (
       (window !== window.top) ||
-      (window === window.top && currentDomain === 'portal.example.com' && showPo === true)
+      (window === window.top && currentDomain === 'portal.inbcu.com' && showPo === true)
     ) {
       closeAllGifs();
 
       /* ===============================
          Po Wrapper
       =============================== */
-      const minionWrapper = document.createElement('div');
-      minionWrapper.id = 'poHelper';
-      minionWrapper.classList.add('gif');
-      Object.assign(minionWrapper.style, {
+      const poWrapper = document.createElement('div');
+      poWrapper.id = 'poHelper';
+      poWrapper.classList.add('gif');
+      Object.assign(poWrapper.style, {
         position: 'fixed',
         left: 'calc(100% - 175px)',
         top: 'calc(100% - 152px)',
@@ -6892,7 +6892,7 @@ function prettyTutorialName(raw) {
       =============================== */
       const gifElement = document.createElement('img');
       gifElement.src = chrome.runtime.getURL('gifs/minimized.gif');
-      gifElement.id = 'tutorialMinion';
+      gifElement.id = 'poElement';
 
       Object.assign(gifElement.style, {
         position: 'relative',
@@ -6903,13 +6903,13 @@ function prettyTutorialName(raw) {
       });
 
   // Append the minion and chat bubble to the wrapper
-    minionWrapper.appendChild(gifElement);
+    poWrapper.appendChild(gifElement);
     chrome.storage.local.get(['showPo'], (result) => {
   if (result.showPo) {
     return; // Do not show the bubble
   }
     if (document.querySelector('#ListingURE_content') || (document.querySelector('#navNodeAnchor_1_1'))) {
-    minionWrapper.appendChild(chatBubble);
+    poWrapper.appendChild(chatBubble);
     }
 chatBubble.style.transition = 'opacity 0.3s ease';
 
@@ -6932,7 +6932,7 @@ setTimeout(() => {
 }, 5000);
     });
 
-createPoHelpButton(minionWrapper, "YOUR_INTRANET_GUIDE_URL");
+createPoHelpButton(poWrapper, "YOUR_INTRANET_GUIDE_URL");
 
       /* ===============================
         GIF replay cooldown logic
@@ -6984,12 +6984,12 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
       `;
 
       // IMPORTANT: wrapper must accept clicks
-      minionWrapper.style.pointerEvents = 'auto';
+      poWrapper.style.pointerEvents = 'auto';
 
       // Assemble ONCE
-      minionWrapper.appendChild(gifElement);
-      minionWrapper.appendChild(poMenu);
-      document.body.appendChild(minionWrapper);
+      poWrapper.appendChild(gifElement);
+      poWrapper.appendChild(poMenu);
+      document.body.appendChild(poWrapper);
 
       // Set initial tooltip text using synced activeTutorial
       (function setInitialTutorialTooltip() {
@@ -7011,7 +7011,7 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
       }
 
       function handleOutsideClick(e) {
-        if (minionWrapper.contains(e.target)) return;
+        if (poWrapper.contains(e.target)) return;
         closePoMenu();
       }
 
@@ -7026,8 +7026,8 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
         if (!isDragging) return;
         hasMoved = true;
 
-        const wrapperWidth = minionWrapper.offsetWidth;
-        const wrapperHeight = minionWrapper.offsetHeight;
+        const wrapperWidth = poWrapper.offsetWidth;
+        const wrapperHeight = poWrapper.offsetHeight;
 
         let newLeft = e.clientX - startX;
         let newTop = e.clientY - startY;
@@ -7035,17 +7035,17 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
         newLeft = Math.max(-40, Math.min(newLeft, window.innerWidth - wrapperWidth + 40));
         newTop = Math.max(-40, Math.min(newTop, window.innerHeight - wrapperHeight + 40));
 
-        minionWrapper.style.left = (newLeft / window.innerWidth) * 100 + 'vw';
-        minionWrapper.style.top = (newTop / window.innerHeight) * 100 + 'vh';
+        poWrapper.style.left = (newLeft / window.innerWidth) * 100 + 'vw';
+        poWrapper.style.top = (newTop / window.innerHeight) * 100 + 'vh';
     
       }
 
       function onPointerUp(e) {
         isDragging = false;
 
-        minionWrapper.releasePointerCapture(e.pointerId);
-        minionWrapper.removeEventListener('pointermove', onPointerMove);
-        minionWrapper.removeEventListener('pointerup', onPointerUp);
+        poWrapper.releasePointerCapture(e.pointerId);
+        poWrapper.removeEventListener('pointermove', onPointerMove);
+        poWrapper.removeEventListener('pointerup', onPointerUp);
 
         if (!hasMoved) {
           togglePoMenu();
@@ -7070,11 +7070,11 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
     });})
         isDragging = true;
         hasMoved = false;
-        startX = e.clientX - minionWrapper.offsetLeft;
-        startY = e.clientY - minionWrapper.offsetTop;
-        minionWrapper.setPointerCapture(e.pointerId);
-        minionWrapper.addEventListener('pointermove', onPointerMove);
-        minionWrapper.addEventListener('pointerup', onPointerUp);
+        startX = e.clientX - poWrapper.offsetLeft;
+        startY = e.clientY - poWrapper.offsetTop;
+        poWrapper.setPointerCapture(e.pointerId);
+        poWrapper.addEventListener('pointermove', onPointerMove);
+        poWrapper.addEventListener('pointerup', onPointerUp);
         e.preventDefault();
       });
 
@@ -7237,7 +7237,7 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
     const dd = document.getElementById("hall-settings-dropdown");
     if (!dd) return;
     // If click is outside the dropdown and not the settings button, close
-    if (!dd.contains(e.target) && e.target !== minionWrapper) closeSettingsDropdown();
+    if (!dd.contains(e.target) && e.target !== poWrapper) closeSettingsDropdown();
   }
 
   function escClose(e) {
@@ -7245,7 +7245,7 @@ chrome.storage.sync.get(['activeTutorial','reportName'], function (result) {
   }
 
   function positionDropdownRelativeToButton(dropdown) {
-    const rect = minionWrapper.getBoundingClientRect();
+    const rect = poWrapper.getBoundingClientRect();
     // position just below-right of the settings button
     dropdown.style.position = "fixed";
     dropdown.style.top = `${Math.round(rect.top - 60)}px`;
@@ -7457,7 +7457,7 @@ if (action === 'settings') {
     const dd = document.getElementById("hall-settings-dropdown");
     if (!dd) return;
     // If click is outside the dropdown and not the settings button, close
-    if (!dd.contains(e.target) && e.target !== minionWrapper) closeSettingsDropdown();
+    if (!dd.contains(e.target) && e.target !== poWrapper) closeSettingsDropdown();
   }
 
   function escClose(e) {
@@ -7465,7 +7465,7 @@ if (action === 'settings') {
   }
 
   function positionDropdownRelativeToButton(dropdown) {
-    const rect = minionWrapper.getBoundingClientRect();
+    const rect = poWrapper.getBoundingClientRect();
     // position just below-right of the settings button
     dropdown.style.position = "fixed";
     dropdown.style.top = `${Math.round(rect.top - 60)}px`;
@@ -7686,4 +7686,3 @@ function waitForAnyElement(selectors, callback) {
 
   }, 500);
 }
-
